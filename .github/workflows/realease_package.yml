@@ -14,8 +14,8 @@ env:
   CLOUDSMITH_SERVICE_SLUG: ${{ vars.CLOUDSMITH_SERVICE_SLUG }}
 
 permissions:
-  contents: read
-  actions: read
+  contents: write
+  actions: write
 
 jobs:
   publish:
@@ -35,7 +35,7 @@ jobs:
       - name: List directory contents
         run: ls -la dist/
         shell: bash
-        
+
       - name: Install Cloudsmith CLI
         uses: cloudsmith-io/cloudsmith-cli-action@v1.0.1
         with:
