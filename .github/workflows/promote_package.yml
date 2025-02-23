@@ -2,6 +2,7 @@ name: Promote Python Package
 
 on:
   workflow_dispatch: 
+    types: [webhook_trigger]
     inputs:
       package_version:
         description: 'Package version to promote (e.g., 0.0.1)'
@@ -17,8 +18,6 @@ env:
 
 permissions:
   id-token: write
-  actions: none
-  contents: read
 
 jobs:
   promote:
