@@ -40,7 +40,7 @@ jobs:
 
       - name: Push package to Cloudsmith
         run: |
-          if ! ls dist/*.zip 1> /dev/null 2>&1; then
+          if ! ls dist/*.tar.gz 1> /dev/null 2>&1; then
             echo "No package found to upload"
             exit 1
           fi
