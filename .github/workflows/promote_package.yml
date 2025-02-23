@@ -17,6 +17,8 @@ env:
 
 permissions:
   id-token: write
+  actions: none
+  contents: read
 
 jobs:
   promote:
